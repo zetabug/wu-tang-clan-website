@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wu-project</title>
+    <!-- remix-icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- custom alert -->
+    <link rel="stylesheet" href="iziToast-master/dist/css/iziToast.min.css">
+
+    <!-- js scripts -->
+    <script src="iziToast-master/dist/js/iziToast.min.js" type="text/javascript" defer></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="nav">
+            <a href="#" class="nav_logo ">
+                <img src="https://cdn.shopify.com/s/files/1/2262/1373/files/WU-TANG-LOGO_180x.png?v=1510278597" alt="">
+            </a>
+
+            <div class="nav_menu " id="nav-menu">
+                <ul class="nav_list">
+                    <li class="nav_item"><a href="#" class="nav_link ">Shop All</a></li>
+                    <li class="nav_item dd_container"><a href="#" class="nav_link flex dd_btn">Apparel <i
+                                class="ri-arrow-drop-down-line arrow_down"></i><i
+                                class="ri-arrow-right-s-line arrow_right"></i></a>
+                        <ul class="dd">
+                            <i class="ri-arrow-left-line back_btn"></i>
+                            <li class="sub_item"><a href="lsg" class="sub-item-link">T-Shirts</a></li>
+                            <li class="sub_item"><a href="#" class="sub-item-link">Long Sleeve Shirts</a></li>
+                            <li class="sub_item"><a href="#" class="sub-item-link">Hoodies</a></li>
+                            <li class="sub_item"><a href="#" class="sub-item-link">Bottoms</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav_item dd_container"><a href="#" class="nav_link flex dd_btn">Accessories <i
+                                class="ri-arrow-drop-down-line arrow_down"></i><i
+                                class="ri-arrow-right-s-line arrow_right"></i></a>
+                        <ul class="dd">
+                            <i class="ri-arrow-left-line back_btn"></i>
+                            <li class="sub_item"><a href="#" class="nav_link">Hats</a></li>
+                            <li class="sub_item"><a href="#" class="nav_link">Socks N Underwear</a></li>
+                            <li class="sub_item"><a href="#" class="nav_link">Glassware</a></li>
+                            <li class="sub_item"><a href="#" class="nav_link">Posters</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav_item"><a href="#" class="nav_link">About</a></li>
+                </ul>
+
+                <div class="nav_close">
+                    <i class="ri-close-line" onclick="toggleMenu()"></i>
+                </div>
+            </div>
+
+
+            <div class="nav_btns ">
+                <a href="#" class="nav_btn"><i class="ri-search-line btn_icon"></i></a>
+                <a href="#" class="nav_btn"><i class="ri-user-3-line btn_icon"></i></a>
+                <a href="#" class="nav_btn"><i class="ri-handbag-line btn_icon" onclick="toggleCart()"></i></a>
+                <a href="#" class="nav_btn"><i class="ri-menu-line btn_icon" onclick="toggleMenu()"></i></a>
+            </div>
+
+            <!-- cart -->
+
+            <div class="cart">
+                <h2 class="cart-title">Your Cart</h2>
+
+                <div class="cart-content">
+                    <div class="cart-items">
+                        <!-- <div class="cart-item">
+                            <img src="https://cdn.shopify.com/s/files/1/2262/1373/products/WTC110256ClassicForeverPOHoodieBlk_360x.png?v=1637793465"
+                                alt="" class="cart-img">
+                            <div class="detail-box">
+                                <div class="cart-product-title">
+                                    Classic Forever Hoodie - Black
+                                </div>
+                                <div class="cart-price">$64.45</div>
+                                <input type="number" value="1" min="1" class="cart-quantity">
+                            </div>
+                            <i class="ri-delete-bin-7-fill cart-remove"></i>
+                        </div> -->
+                    </div>
+
+
+                    <!-- Total -->
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">$0</div>
+                    </div>
+
+                    <!-- Buy button -->
+                    <button type="button" class="btn-buy">Buy Now</button>
+
+                    <!-- Close-btn -->
+                    <i class="ri-close-line " id="close-cart" onclick="toggleCart()"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--==================== products ====================-->
+        <section class="shop-content" id="shop_content">
+            <div class="page-width">
+                <div class="products">
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/2262/1373/products/WTC110256ClassicForeverPOHoodieBlk_360x.png?v=1637793465"
+                            alt="" class="product-img">
+                        <div class="product-title">Classic Forever Hoodie - Black</div>
+                        <span class="price">$64.45</span>
+                        <i class="ri-handbag-line atc-btn"></i>
+                    </div>
+
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/2262/1373/products/WTC110270WSocksBlk_360x.png?v=1637732426"
+                            alt="" class="product-img">
+                        <div class="product-title">Classic Logo Socks - Black</div>
+                        <span class="price">$19.35</span>
+                        <i class="ri-handbag-line atc-btn"></i>
+                    </div>
+
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/2262/1373/products/WTC110255ClassicForeverSweatShortsblk_360x.png?v=1637791991"
+                            alt="" class="product-img">
+                        <div class="product-title">Classic logo Sweatshorts - Black</div>
+                        <span class="price">$50.60</span>
+                        <i class="ri-handbag-line atc-btn"></i>
+                    </div>
+
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/2262/1373/products/WTC110344ClassicForeverCropTshirtBlk_360x.png?v=1637793950"
+                            alt="" class="product-img">
+                        <div class="product-title">Classic Forever Crop T-shirt - Black</div>
+                        <span class="price">$35.45</span>
+                        <i class="ri-handbag-line atc-btn"></i>
+                    </div>
+
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/2262/1373/products/BlueLogoTBlueTieDye_360x.png?v=1637729544"
+                            alt="" class="product-img">
+                        <div class="product-title"> Blue Classic Logo T-shirt - Black</div>
+                        <span class="price">$35.55</span>
+                        <i class="ri-handbag-line atc-btn"></i>
+                    </div>
+
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/2262/1373/products/FlameLogoLSBlackTieDye_360x.png?v=1637729830"
+                            alt="" class="product-img">
+                        <div class="product-title"> Flames Classic Logo T-shirt - Black Tie Dye</div>
+                        <span class="price">$35.45</span>
+                        <i class="ri-handbag-line atc-btn"></i>
+                    </div>
+
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/2262/1373/products/WTC110258SwirlWOversizedTshirtBlk_360x.png?v=1637793706"
+                            alt="" class="product-img">
+                        <div class="product-title"> Swirl Oversized Logo T-shirt - Black</div>
+                        <span class="price">$39.45</span>
+                        <i class="ri-handbag-line atc-btn"></i>
+                    </div>
+
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/2262/1373/products/FlameLogoTOrangeTieDye_360x.png?v=1637729702"
+                            alt="" class="product-img">
+                        <div class="product-title"> Flames Classic Logo T-shirt - Gold Tie Dye</div>
+                        <span class="price">$35.45</span>
+                        <i class="ri-handbag-line atc-btn"></i>
+                    </div>
+
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/2262/1373/products/WhtLogoTBlueTieDye_360x.png?v=1637729210"
+                            alt="" class="product-img">
+                        <div class="product-title"> Classic Logo T-shirt - Light Blue Tie Dye</div>
+                        <span class="price">$35.45</span>
+                        <i class="ri-handbag-line atc-btn"></i>
+                    </div>
+
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/2262/1373/products/WTC110269WSocksWht_360x.png?v=1637732362"
+                            alt="" class="product-img">
+                        <div class="product-title"> Classic Logo Socks - White</div>
+                        <span class="price">$19.45</span>
+                        <i class="ri-handbag-line atc-btn"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== subscribe ====================-->
+        <section class="subscribe-section" id="subscribe_section">
+            <div class="page-width">
+                <div class="subscribe-container">
+                    <div class="section-header">
+                        <div class="subscribe-heading">SUBSCRIBE TO WU TANG CLAN</div>
+                        <p class="subheading">Stay updated on the latest news</p>
+                    </div>
+
+                    <form class="subscribe-form">
+                        <div class="input-group">
+                            <input type="email" placeholder="Email address">
+                            <button type="submit">SUBSCRIBE</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer-section">
+        <div class="page-width">
+            <div class="data-section">
+                <a href="#">Contact Us</a>
+                <a href="#">Support</a>
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Do Not Sell My Info</a>
+            </div>
+
+        </div>
+        <div class="copyright-section">
+            © 2022, Wu Tang Clan Powered by Live Nation Merchandise
+        </div>
+    </footer>
+</body>
+
+</html>
